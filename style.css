@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: 'Museosans', sans-serif;
+  color: #444;
+}
+
+.content-wrapper {
+  box-sizing: border-box;
+  margin-left: 40%;
+  width: 60%;
+}
+
+.content {
+  padding: 100px;
+}
+
+.content h1 {
+  font-family: 'Raleway';
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  font-weight: 900;
+}
+
+footer {
+  margin-left:-70px;
+  width: 120%;
+  font-size: 0.9rem;
+  color: #ddd;
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+}
+
+header {
+  clip-path: polygon(0% 0%, 0% 100%, 95% 100%, 100% 0%);
+  box-sizing: border-box;
+  background-color: #eee;
+  padding: 3em;
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+header > * {
+  visibility: hidden;
+  max-width: 350px;
+  animation: 1.2s slideFromLeft;
+  animation-fill-mode: forwards;
+  text-align: right;
+}
+
+header h1 {
+  font-family: 'Museosans 900', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  line-height: 110%;
+}
+
+header p {
+  animation-delay: 0.2s;
+  font-weight: light;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+header button {
+  animation-delay: 1s;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.3em;
+  border-radius: 15px;
+  background-color: rgb(241, 44, 80);
+  color: white;
+  width: 50%;
+  text-align: center !important;
+  padding: 10px;
+  margin-top: 25px;
+  transition: 0.5s background-color;
+  max-width: 185px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(241, 44, 80);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+header button:hover {
+  background-color: rgb(216, 25, 60);
+  transition: 0.5s background-color;
+}
+
+.social {
+  font-size: 2.5em;
+  animation-delay: 0.7s !important;
+}
+
+.fa {
+  color: #444;
+  text-decoration: none;
+  transition: 0.5s color;
+  margin-left: 5px;
+}
+
+.fa:hover {
+  transition: 0.5s color;
+}
+
+.fa-github:hover {
+  color: #4078c0;
+}
+
+.fa-linkedin-square:hover {
+  color: #0077B5;
+}
+
+.fa-twitter-square:hover {
+  color: #1da1f2;
+}
+
+.fa-facebook-square:hover {
+  color: #3B5998;
+}
+
+.fa-instagram:hover {
+  color: #8a3ab9;
+}
+
+@media (max-width: 992px) {
+  .content-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  footer {
+    margin-left:0px;
+    width: 100%;
+  }
+
+  header {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 95%, 100% 0%);
+    transform: translateY(-75px);
+    position: static;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    padding: 0px;
+  }
+
+  header > * {
+    text-align: center;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    visibility: visible;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@font-face {
+  font-family: 'Museosans 100';
+  src: url('https://uploads-ssl.webflow.com/57c5dd245cc3aa553acf1266/57c90b35610eadf61b37aed8_MuseoSans_100.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museosans 900';
+  src: url('https://uploads-ssl.webflow.com/57c5dd245cc3aa553acf1266/57c90b367d70832a6231098a_MuseoSans_900_Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
